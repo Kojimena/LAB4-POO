@@ -20,7 +20,10 @@ public class RadioA extends Radio implements ClaseCarroA {
     }
 
     @Override
-    public String verTarjetasPresentacion() {
-        return "";
+    public String verTarjetasPresentacion() {  //https://www.mercedes-benz.com.gt/asesores-de-ventas
+        String mensaje = "Nombre: MARIA JOSE SOLARES \n";
+        mensaje += "Empresa: Mercedes-Benz\n";
+        mensaje += "Número: 23168308\n";
+        return mensaje;
     }
 }
