@@ -1,6 +1,6 @@
 package radios.interfaces;
 
 public interface ClaseCarroS {
-    String cambiarBocinasAuriculares(int opcion);
-    String planificarViaje(String destino);
+    public String cambiarBocinasAuriculares(int opcion);
+    public String planificarViaje(String destino);
 }

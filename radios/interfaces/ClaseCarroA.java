@@ -1,6 +1,6 @@
 package radios.interfaces;
 
 public interface ClaseCarroA {
-    String llamarUltimoContacto();
-    String verTarjetasPresentacion();
+    public String llamarUltimoContacto();
+    public String verTarjetasPresentacion();
 }

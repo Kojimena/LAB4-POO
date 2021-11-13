@@ -1,6 +1,6 @@
 package radios.interfaces;
 
 public interface ClaseCarroC {
-    String llamadaEnEspero();
-    String pronosticoTiempo();
+    public String llamadaEnEspero();
+    public String pronosticoTiempo();
 }
