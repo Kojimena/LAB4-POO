@@ -217,6 +217,7 @@ public abstract class Radio {
 		return mensaje;
     }
 
+    
     public String toString(){
         String  mensaje = tiporadio+ "\n";
         if(noPlaylist){//modo radio
@@ -233,7 +234,7 @@ public abstract class Radio {
         if(enLlamada){
             mensaje += "Tiene una llamada en curso. "+"\n";
         }
-        
+
         return mensaje;
     }
 
