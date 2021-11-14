@@ -67,13 +67,13 @@ public abstract class Radio {
 		   case 1:
 			   playllistActual = canciones[0];
 			   canciontActual = playllistActual[0];
-			   mensaje = "Se está reproduciendo: " + canciontActual[0] + " de " + canciontActual[2] + " (" + canciones[1] + ")";
+			   mensaje = "Se está reproduciendo: " + canciontActual[0] + " de " + canciontActual[2] + " (" + canciontActual[1] + ")";
 			   break;
 	   
 			case 2:
 			   playllistActual = canciones[1];
 			   canciontActual = playllistActual[0];
-			   mensaje = "Se está reproduciendo: " + canciontActual[0] + " de " + canciontActual[2] + " (" + canciones[1] + ")";
+			   mensaje = "Se está reproduciendo: " + canciontActual[0] + " de " + canciontActual[2] + " (" + canciontActual[1] + ")";
 		   default:
 		   	mensaje = "No se pudo seleccionar la lista de reproduccion deseada";
 	   }
@@ -100,9 +100,20 @@ public abstract class Radio {
 		   default:
 			   break;
 	   }
-	   String mensaje = "Se está reproduciendo: " + canciontActual[0] + " de " + canciontActual[2] + " (" + canciones[1] + ")";
+	   String mensaje = "Se está reproduciendo: " + canciontActual[0] + " de " + canciontActual[2] + " (" + canciontActual[1] + ")";
 
 	   return mensaje;
    }
+
+   public String escucharCancion(){
+	   String mensaje ="";
+	   if(playllistActual != null){
+		   canciontActual = playllistActual[0];
+		   mensaje = "Se está reproduciendo: " + canciontActual[0] + " de " + canciontActual[2] + " (" + canciontActual[1] + ")";
+		}else{
+			mensaje ="No tiene una playlist activa.";
+		}
+		return mensaje;
+		}
 
 }
