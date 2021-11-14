@@ -137,5 +137,30 @@ public abstract class Radio {
         return mensaje;
     }
 
+	public String llamar(int contacto){
+		String mensaje = "";
+
+		try {
+			String[] contactoElegido = contactos[contacto];
+			enLlamada = true;
+			mensaje = "Llamando a: " + contactoElegido[0];
+		} catch (Exception e) {
+			mensaje = "No se ha encontrado el contacto.";
+		}
+
+		return mensaje;
+	}
+
+	public String finalizarLlamada(){
+		String mensaje = "";
+		if (enLlamada) {
+			enLlamada = false;
+			mensaje = "Se ha finalizado la llamada";
+		}else{
+			mensaje = "No hay llamadas activas por ahora";
+		}
+		return mensaje;
+	}
+
 
 }
