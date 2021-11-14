@@ -239,6 +239,7 @@ public abstract class Radio {
     }
 
     /**
+     * Se devuelve la pantalla del auto
      * @return string 
      * */    
     public String toString(){
@@ -267,7 +268,7 @@ public abstract class Radio {
     }
 
     /**
-     * 
+     * Se regresa el estado del radio
      * @return encendido
      */
     public boolean getEncendido(){
