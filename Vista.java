@@ -43,7 +43,7 @@ public class Vista {
             mensaje("\n MODO RADIO ");
             mensaje("1. Cambiar de FM a AM");
             mensaje("2. Cambiar emisoras, se cambiará en intervalos de 0.5");
-            mensaje("3. Guardar emisoras");
+            mensaje("3. Guardar emisora");
             mensaje("4. Cargar emisora");
             mensaje("\n MODO REPRODUCCIÓN ");
             mensaje("5. Seleccionar lista de reproducción ");
@@ -91,7 +91,7 @@ public class Vista {
             mensaje("\n MODO RADIO ");
             mensaje("1. Cambiar de FM a AM");
             mensaje("2. Cambiar emisoras, se cambiará en intervalos de 0.5");
-            mensaje("3. Guardar emisoras");
+            mensaje("3. Guardar emisora");
             mensaje("4. Cargar emisora");
             mensaje("\n MODO REPRODUCCIÓN ");
             mensaje("5. Seleccionar lista de reproducción ");
@@ -140,7 +140,7 @@ public class Vista {
             mensaje("\n MODO RADIO ");
             mensaje("1. Cambiar de FM a AM");
             mensaje("2. Cambiar emisoras, se cambiará en intervalos de 0.5");
-            mensaje("3. Guardar emisoras");
+            mensaje("3. Guardar emisora");
             mensaje("4. Cargar emisora");
             mensaje("\n MODO REPRODUCCIÓN ");
             mensaje("5. Seleccionar lista de reproducción ");

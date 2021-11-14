@@ -250,7 +250,7 @@ public abstract class Radio {
             mensaje += "Emisora actual: "+ emisoraactual+ "\n";
            for (int i = 0; i < emisorasGuardadas.length; i++) {
                if(emisorasGuardadas[i]== emisoraactual){
-                   mensaje += "Emisora favorita: "+ (i+1);
+                   mensaje += "Emisora favorita: "+ (i+1) + "\n";
                }
            }
         }else{ //modo playlist
