@@ -48,7 +48,7 @@ public class Vista {
             mensaje("\n MODO REPRODUCCIÓN ");
             mensaje("5. Seleccionar lista de reproducción ");
             mensaje("6. Cambiar canción");
-            mensaje("7. Escuchar canción");
+            mensaje("7. Escuchar una canción");
             mensaje("\n MODO TELEFONO ");
             mensaje("8. Conectar/desconectar teléfono");
             mensaje("9. Mostrar Contactos");
@@ -96,7 +96,7 @@ public class Vista {
             mensaje("\n MODO REPRODUCCIÓN ");
             mensaje("5. Seleccionar lista de reproducción ");
             mensaje("6. Cambiar canción");
-            mensaje("7. Escuchar canción");
+            mensaje("7. Escuchar una canción");
             mensaje("\n MODO TELEFONO ");
             mensaje("8. Conectar/desconectar teléfono");
             mensaje("9. Mostrar Contactos");
@@ -145,7 +145,7 @@ public class Vista {
             mensaje("\n MODO REPRODUCCIÓN ");
             mensaje("5. Seleccionar lista de reproducción ");
             mensaje("6. Cambiar canción");
-            mensaje("7. Escuchar canción");
+            mensaje("7. Escuchar una canción");
             mensaje("\n MODO TELEFONO ");
             mensaje("8. Conectar/desconectar teléfono");
             mensaje("9. Mostrar Contactos");
@@ -324,8 +324,8 @@ public class Vista {
             mensaje("5. Jimena Hernández");
             mensaje("Seleccion: ");
             try {
-                opcion = scan.nextInt();
-                if (opcion < 1 | opcion > 5) {
+                opcion = scan.nextInt() - 1;
+                if (opcion < 0 | opcion > 4) {
                     throw new ArithmeticException();
                 }else{
                     ingresoCorrecto = true;

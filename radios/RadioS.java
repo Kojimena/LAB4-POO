@@ -6,6 +6,7 @@ import radios.interfaces.ClaseCarroS;
 
 public class RadioS extends Radio implements ClaseCarroS {
 
+    
     public RadioS(){
         this.tiporadio = "Clase S";
     }
