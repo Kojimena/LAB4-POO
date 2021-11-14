@@ -4,6 +4,11 @@ import radios.interfaces.ClaseCarroC;
 import java.util.Random;
 
 public class RadioC extends Radio implements ClaseCarroC {
+
+    public RadioC(){
+        this.tiporadio = "Clase C";
+    }
+
     @Override
     public String llamadaEnEspera() {
         String mensaje = " ";

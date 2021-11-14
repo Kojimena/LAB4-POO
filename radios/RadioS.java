@@ -5,6 +5,11 @@ import java.util.Random;
 import radios.interfaces.ClaseCarroS;
 
 public class RadioS extends Radio implements ClaseCarroS {
+
+    public RadioS(){
+        this.tiporadio = "Clase S";
+    }
+
     @Override
     public String cambiarBocinasAuriculares(int opcion) {
         String mensaje = "";

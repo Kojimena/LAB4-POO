@@ -3,6 +3,11 @@ package radios;
 import radios.interfaces.ClaseCarroA;
 
 public class RadioA extends Radio implements ClaseCarroA {
+
+    public RadioA(){
+        this.tiporadio = "Clase A";
+    }
+
     String[] ultimoContacto = null;  // 0:Nombre  1:Numero
 
     @Override
