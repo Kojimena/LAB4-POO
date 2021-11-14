@@ -150,7 +150,7 @@ public class Controlador {
                 case 2://clase A
                 RadioA radioactualA = new RadioA();
                 int menuA= vista.funcionalidadescarroA();
-                while(menuA != 14){
+                while(menuA != 15){
                     switch(menuA){
                         case 0: //Enceder o apagar
                         vista.mensaje(radioactualA.encender());
@@ -281,7 +281,7 @@ public class Controlador {
                 case 3: //clase C
                 RadioC radioactualC = new RadioC();
                 int menuC= vista.funcionalidadescarroC();
-                while(menuC != 14){
+                while(menuC != 15){
                     switch(menuC){
                         case 0: //Enceder o apagar
                         vista.mensaje(radioactualC.encender());

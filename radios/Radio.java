@@ -87,6 +87,7 @@ public abstract class Radio {
     */
    public String cargarEmisora(double emisora){
        String mensaje = "";
+       noPlaylist = true;
        if(emisora >= 87.5 & emisora <= 108.0){
            this.emisoraactual = emisora;
            mensaje = "Se está escuchando la estación: " + emisora;
@@ -103,6 +104,7 @@ public abstract class Radio {
     */
    public String seleccionarListaReproduccion(int index){
 	   String mensaje = "";
+       noPlaylist = false;
        switch (index) {
 		   case 1:
 			   playllistActual = canciones[0];
@@ -126,6 +128,7 @@ public abstract class Radio {
     * @return mensaje
     */
    public String cambiarCancion(int direccion){
+       noPlaylist = false;
 	   switch (direccion) {
 		   case 1:  // Adelante
 			   if (indexCancion >= (playllistActual.length-1) ) {
@@ -156,6 +159,7 @@ public abstract class Radio {
     * @return mensaje
     */
    public String escucharCancion(){
+       noPlaylist = false;
 	   String mensaje ="";
 	   if(playllistActual != null){
 		   canciontActual = playllistActual[0];
@@ -235,7 +239,8 @@ public abstract class Radio {
 
     
     public String toString(){
-        String  mensaje = tiporadio+ "\n";
+        String  mensaje = "\n\n######################### Pantalla #########################\n" ;
+        mensaje += tiporadio+ "\n";
         if(noPlaylist){//modo radio
             mensaje += "Frecuencia: "+ tipoFrecuencia+ "\n";
             mensaje += "Emisora actual: "+ emisoraactual+ "\n";
@@ -245,12 +250,16 @@ public abstract class Radio {
                }
            }
         }else{ //modo playlist
-            mensaje += canciontActual[0]+ " de " + canciontActual[2] + " ("+ canciontActual[3]+ ")"+"\n";
+            if(canciontActual != null){
+                mensaje += "Reproduciendo: " + canciontActual[0]+ " de " + canciontActual[2] + " ("+ canciontActual[3]+ ")"+"\n";
+            }        
         }
         if(enLlamada){
             mensaje += "Tiene una llamada en curso. "+"\n";
+        }else{
+            mensaje += "No está en una llamada actualmente\n";
         }
-
+        mensaje += "############################################################\n";
         return mensaje;
     }
 

@@ -62,7 +62,7 @@ public class Vista {
             mensaje("Seleccion: ");
             try {
                 opcion = scan.nextInt();
-                if(opcion > 14 | opcion < 0){
+                if(opcion > 15 | opcion < 0){
                     throw new InputMismatchException();
                 }else{
                     ingresoCorrecto = true;
@@ -110,7 +110,7 @@ public class Vista {
             mensaje("Seleccion: ");
             try {
                 opcion = scan.nextInt();
-                if(opcion > 14 | opcion < 0){
+                if(opcion > 15 | opcion < 0){
                     throw new InputMismatchException();
                 }else{
                     ingresoCorrecto = true;
@@ -159,7 +159,7 @@ public class Vista {
             mensaje("Seleccion: ");
             try {
                 opcion = scan.nextInt();
-                if(opcion > 14 | opcion < 0){
+                if(opcion > 15 | opcion < 0){
                     throw new InputMismatchException();
                 }else{
                     ingresoCorrecto = true;
