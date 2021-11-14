@@ -6,11 +6,18 @@ import radios.interfaces.ClaseCarroS;
 
 public class RadioS extends Radio implements ClaseCarroS {
 
-    
+    /**
+     * Constructor del radio S
+     */
     public RadioS(){
         this.tiporadio = "Clase S";
     }
 
+    /**
+     * Se cambia entre las bocinas del auto y los auriculares del dueño
+     * @param opcion
+     * @return mensaje
+     */
     @Override
     public String cambiarBocinasAuriculares(int opcion) {
         String mensaje = "";
@@ -28,6 +35,11 @@ public class RadioS extends Radio implements ClaseCarroS {
         return mensaje;
     }
 
+    /**
+     * Planifica un viaje al destino especificao
+     * @param destino
+     * @return mensaje
+     */
     @Override
     public String planificarViaje(String destino) {
         String mensaje = "Se ha encontrado la ruta más rápida para llegar a " + destino;

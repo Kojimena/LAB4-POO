@@ -4,12 +4,19 @@ import radios.interfaces.ClaseCarroA;
 
 public class RadioA extends Radio implements ClaseCarroA {
 
+    /**
+     * Constructor del radio A
+     */
     public RadioA(){
         this.tiporadio = "Clase A";
     }
 
     String[] ultimoContacto = null;  // 0:Nombre  1:Numero
 
+    /**
+     * Se llama al último contacto llamado
+     * @return mensaje
+     */
     @Override
     public String llamarUltimoContacto() {
         String mensaje = "";
@@ -24,6 +31,10 @@ public class RadioA extends Radio implements ClaseCarroA {
         return mensaje;
     }
 
+    /**
+     * Muestra la tarjeta de presentación de ejemplo (sala de ventas)
+     * @return mensaje
+    */
     @Override
     public String verTarjetasPresentacion() {  //https://www.mercedes-benz.com.gt/asesores-de-ventas
         String mensaje = "Nombre: MARIA JOSE SOLARES \n";

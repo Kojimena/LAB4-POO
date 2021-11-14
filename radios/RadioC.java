@@ -5,10 +5,17 @@ import java.util.Random;
 
 public class RadioC extends Radio implements ClaseCarroC {
 
+    /**
+     * Constructor del radio C
+     */
     public RadioC(){
         this.tiporadio = "Clase C";
     }
 
+    /**
+     * Pone la llamada activca en espera
+     * @return mensaje
+     */
     @Override
     public String llamadaEnEspera() {
         String mensaje = " ";
@@ -20,6 +27,9 @@ public class RadioC extends Radio implements ClaseCarroC {
         return mensaje;
     }
 
+    /**
+     * Pronostica el tiempo de la ubicación del conductor
+     */
     @Override
     public String pronosticoTiempo() {
         String mensaje = "El día de hoy el día estará ";
