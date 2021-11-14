@@ -229,7 +229,7 @@ public class Vista {
     */
     public int cambioCancion(){
         int opcion;
-        mensaje("\n" +"¿Qué desea reproducir");
+        mensaje("\n" +"¿Qué desea reproducir?");
         mensaje("1. siguiente canción");
         mensaje("2. canción anterior");
         mensaje("Seleccion: ");
