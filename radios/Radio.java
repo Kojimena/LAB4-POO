@@ -41,6 +41,18 @@ public abstract class Radio {
     return mensaje;
    }
 
+   public String guardarEmisora(){
+    String mensaje="";
+       for (int i = 0; i < emisorasGuardadas.length; i++) {
+           if (emisorasGuardadas[i] == 0.0){
+               emisorasGuardadas[i] = emisoraactual;
+               mensaje= " Se ha guardado la emisora correctamente. ";
+               break;
+           }
+       }
+       return mensaje;
+   }
+
 
 
 }
