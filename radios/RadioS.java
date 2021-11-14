@@ -15,12 +15,10 @@ public class RadioS extends Radio implements ClaseCarroS {
         String mensaje = "";
         switch (opcion) {
             case 1:
-                this.tipoFrecuencia = "FM";
-                mensaje = "Ahora la frecuencia es: FM";
+                mensaje = "Ahora se están utilizando sus bocinas";
                 break;
             case 2:
-                this.tipoFrecuencia = "AM";
-                mensaje = "Ahora la frecuencia es: AM";
+                mensaje = "Ahora se están utilizando sus audífonos";
                 break;
             default:
                 mensaje = "Se ingresó una opción inválida. La frecuencia actual es: " + this.tipoFrecuencia;

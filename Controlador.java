@@ -17,7 +17,7 @@ public class Controlador {
                 case 1: //clase S
                 RadioS radioactualS = new RadioS();
                 int menuS= vista.funcionalidadescarroS();
-                while(menuS != 14){
+                while(menuS != 15){
                     switch(menuS){
                         case 0: //Enceder o apagar
                         vista.mensaje(radioactualS.encender());
@@ -134,6 +134,13 @@ public class Controlador {
                             vista.mensaje("El radio no se encuentra encendido");
                         }
                         break;
+
+                        case 14:
+                        if (radioactualS.getEncendido()) {
+                            vista.mensaje(radioactualS.toString());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         
                     }
                     menuS= vista.funcionalidadescarroS();
@@ -257,6 +264,13 @@ public class Controlador {
                             vista.mensaje("El radio no se encuentra encendido");
                         }
                         break;
+
+                        case 14:
+                        if (radioactualA.getEncendido()) {
+                            vista.mensaje(radioactualA.toString());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         
                     }
                     menuA= vista.funcionalidadescarroA();
@@ -382,6 +396,13 @@ public class Controlador {
                             vista.mensaje("El radio no se encuentra encendido");
                         }
                         break;
+
+                        case 14:
+                        if (radioactualC.getEncendido()) {
+                            vista.mensaje(radioactualC.toString());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         
                     }
                     menuC= vista.funcionalidadescarroC();
