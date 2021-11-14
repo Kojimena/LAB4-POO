@@ -3,6 +3,7 @@ package radios;
 import radios.interfaces.ClaseCarroA;
 
 public class RadioA extends Radio implements ClaseCarroA {
+    String[] ultimoContacto = null;  // 0:Nombre  1:Numero
 
     /**
      * Constructor del radio A
@@ -11,7 +12,6 @@ public class RadioA extends Radio implements ClaseCarroA {
         this.tiporadio = "Clase A";
     }
 
-    String[] ultimoContacto = null;  // 0:Nombre  1:Numero
 
     /**
      * Se llama al último contacto llamado
@@ -42,4 +42,19 @@ public class RadioA extends Radio implements ClaseCarroA {
         mensaje += "Número: 23168308\n";
         return mensaje;
     }
+
+    public String llamar(int contacto){
+		String mensaje = "";
+
+		try {
+			String[] contactoElegido = contactos[contacto];
+            ultimoContacto = contactoElegido;
+			enLlamada = true;
+			mensaje = "Llamando a: " + contactoElegido[0];
+		} catch (Exception e) {
+			mensaje = "No se ha encontrado el contacto.";
+		}
+
+		return mensaje;
+	}
 }
