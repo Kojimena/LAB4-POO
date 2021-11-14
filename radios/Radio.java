@@ -24,7 +24,7 @@ public abstract class Radio {
 
 
    /**
-    * 
+    * Cambia la frecuencia entre AM y FM
     * @param frecuencia
     * @return
     */
@@ -47,7 +47,7 @@ public abstract class Radio {
    }
 
    /**
-    * 
+    * Cambia la emisora en cambios incrementales de 0.5
     * @return mensaje
     */
    public String cambiarEmisora(){
@@ -64,7 +64,7 @@ public abstract class Radio {
    }
 
    /**
-    * 
+    * Se guarda la emisora actual en el primer espacio disponible
     * @return mensaje
     */
    public String guardarEmisora(){
@@ -73,7 +73,7 @@ public abstract class Radio {
     for (int i = 0; i < emisorasGuardadas.length; i++) {
         if (emisorasGuardadas[i] == 0.0){
             emisorasGuardadas[i] = emisoraactual;
-            mensaje= " Se ha guardado la emisora correctamente. ";
+            mensaje= " Se ha guardado la emisora correctamente en la posición " + (i+1);
             break;
         }
     }
@@ -81,7 +81,7 @@ public abstract class Radio {
    }
 
    /**
-    * 
+    * Se carga la emisora elegida por el usuario
     * @param emisora
     * @return
     */
@@ -98,7 +98,7 @@ public abstract class Radio {
    }
 
    /**
-    * 
+    * Se elige una de las listas de reproducción de prueba
     * @param index
     * @return mensaje
     */
@@ -116,6 +116,7 @@ public abstract class Radio {
 			   playllistActual = canciones[1];
 			   canciontActual = playllistActual[0];
 			   mensaje = "Se está reproduciendo: " + canciontActual[0] + " de " + canciontActual[2] + " (" + canciontActual[1] + ")";
+               break;
 		   default:
 		   	mensaje = "No se pudo seleccionar la lista de reproduccion deseada";
 	   }
@@ -123,7 +124,7 @@ public abstract class Radio {
    }
 
    /**
-    * 
+    * Cambia la canción
     * @param direccion
     * @return mensaje
     */
@@ -155,7 +156,7 @@ public abstract class Radio {
    }
 
    /**
-    * 
+    * Inicia la reproducción de la playlist
     * @return mensaje
     */
    public String escucharCancion(){
@@ -237,7 +238,9 @@ public abstract class Radio {
 		return mensaje;
     }
 
-    
+    /**
+     * @return string 
+     * */    
     public String toString(){
         String  mensaje = "\n\n######################### Pantalla #########################\n" ;
         mensaje += tiporadio+ "\n";
@@ -263,6 +266,10 @@ public abstract class Radio {
         return mensaje;
     }
 
+    /**
+     * 
+     * @return encendido
+     */
     public boolean getEncendido(){
         return encendido;
     }
