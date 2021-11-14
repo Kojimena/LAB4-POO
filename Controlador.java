@@ -37,7 +37,9 @@ public class Controlador {
                         vista.mensaje(radioactualS.guardarEmisora());
                         break;
 
-                        case 4:// 
+                        case 4:// Cargar emisora
+                        double nuevaEmisoraS = vista.elegirEmisora();
+                        vista.mensaje(radioactualS.cargarEmisora(nuevaEmisoraS));
                         break;
 
                         case 5://Seleccionar lista de reproducción
@@ -110,7 +112,9 @@ public class Controlador {
                         vista.mensaje(radioactualA.guardarEmisora());
                         break;
 
-                        case 4:// 
+                        case 4:// Cargar emisora
+                        double nuevaEmisoraA = vista.elegirEmisora();
+                        vista.mensaje(radioactualA.cargarEmisora(nuevaEmisoraA));
                         break;
 
                         case 5://Seleccionar lista de reproducción
@@ -182,7 +186,9 @@ public class Controlador {
                         vista.mensaje(radioactualC.guardarEmisora());
                         break;
 
-                        case 4:// 
+                        case 4:// Cargar emisora
+                        double nuevaEmisoraC = vista.elegirEmisora();
+                        vista.mensaje(radioactualC.cargarEmisora(nuevaEmisoraC));
                         break;
 
                         case 5://Seleccionar lista de reproducción
