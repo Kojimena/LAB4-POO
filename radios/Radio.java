@@ -114,6 +114,28 @@ public abstract class Radio {
 			mensaje ="No tiene una playlist activa.";
 		}
 		return mensaje;
-		}
+	}
+
+    public String conectarTelefono(){
+        String mensaje ="Se ha conectado el teléfono correctamente";
+        return mensaje;
+    }
+
+    public String[][] getContactos(){
+        return contactos;
+    }
+
+    public String encender(){
+        String mensaje ="";
+        if (encendido == false){
+            encendido=true;
+            mensaje= "Se ha encendido el radio";
+        }else{
+            encendido=false;
+            mensaje= "Se ha apagado el radio";
+        }
+        return mensaje;
+    }
+
 
 }
