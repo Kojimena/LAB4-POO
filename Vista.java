@@ -374,7 +374,7 @@ public class Vista {
     */
     public String planificarViaje(){
         
-        System.out.printf("\nIngrese el nombre de la localización del viaje que desea planificar");
+        System.out.printf("\nIngrese el nombre de la localización del viaje que desea planificar: ");
 
         String location = scan.nextLine();
 
