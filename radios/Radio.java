@@ -263,7 +263,6 @@ public abstract class Radio {
         }else{
             mensaje += "No está en una llamada actualmente\n";
         }
-        mensaje += "############################################################\n";
         return mensaje;
     }
 
