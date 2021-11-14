@@ -218,7 +218,23 @@ public abstract class Radio {
     }
 
     public String toString(){
-
+        String  mensaje = tiporadio+ "\n";
+        if(noPlaylist){//modo radio
+            mensaje += "Frecuencia: "+ tipoFrecuencia+ "\n";
+            mensaje += "Emisora actual: "+ emisoraactual+ "\n";
+           for (int i = 0; i < emisorasGuardadas.length; i++) {
+               if(emisorasGuardadas[i]== emisoraactual){
+                   mensaje += "Emisora favorita: "+ (i+1);
+               }
+           }
+        }else{ //modo playlist
+            mensaje += canciontActual[0]+ " de " + canciontActual[2] + " ("+ canciontActual[3]+ ")"+"\n";
+        }
+        if(enLlamada){
+            mensaje += "Tiene una llamada en curso. "+"\n";
+        }
+        
+        return mensaje;
     }
 
 
