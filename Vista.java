@@ -406,4 +406,8 @@ public class Vista {
         return opcion;
     }
 
+    public void separador(){
+        mensaje("############################################################\n");
+    }
+
 }
