@@ -55,6 +55,7 @@ public class Vista {
         mensaje("12. Cambiar a bocinas o auriculares");
         mensaje("\n MODO PRODUCTIVIDAD ");
         mensaje("13. Planificar Viajes");
+        mensaje("14. Salir");
         mensaje("Seleccion: ");
         try {
             opcion = scan.nextInt();
@@ -96,6 +97,7 @@ public class Vista {
         mensaje("12. Cambiar a llamada en espera");
         mensaje("\n MODO PRODUCTIVIDAD ");
         mensaje("13. Ver pronostico del tiempo");
+        mensaje("14. Salir");
         mensaje("Seleccion: ");
         try {
             opcion = scan.nextInt();
@@ -137,6 +139,7 @@ public class Vista {
         mensaje("12. Lllamar a último contacto");
         mensaje("\n MODO PRODUCTIVIDAD ");
         mensaje("13. Ver tarjetas presentación");
+        mensaje("14. Salir");
         mensaje("Seleccion: ");
         try {
             opcion = scan.nextInt();
@@ -163,6 +166,7 @@ public class Vista {
         mensaje("1. Radio de un vehículo clase S");
         mensaje("2. Radio de un vehículo clase A");
         mensaje("3. Radio de un vehículo clase C");
+        mensaje("4. Salir");
         mensaje("Seleccion: ");
         try {
             opcion = scan.nextInt();
