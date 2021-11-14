@@ -19,9 +19,9 @@ public abstract class Radio {
     protected String[][] playllistActual;
     protected String[] canciontActual;
 	protected int indexCancion = 0;
+    protected String tiporadio;
 
 
-   abstract String pantalla();
 
    /**
     * 
@@ -215,6 +215,10 @@ public abstract class Radio {
 			mensaje = "No hay llamadas activas por ahora";
 		}
 		return mensaje;
+    }
+
+    public String toString(){
+
     }
 
 
