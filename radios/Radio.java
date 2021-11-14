@@ -141,7 +141,7 @@ public abstract class Radio {
 			   break;
 			case 2:  // Atrás
 			   if (indexCancion <= 1 ) {
-				   canciontActual = playllistActual[playllistActual.length];
+				   canciontActual = playllistActual[playllistActual.length-1];
 			   }else{
 				   indexCancion--;
 				   canciontActual = playllistActual[indexCancion];
@@ -172,7 +172,7 @@ public abstract class Radio {
 	}
 
     /**
-     * 
+     * Se conecta el teléfono al radio
      * @return mensaje
      */
     public String conectarTelefono(){
@@ -181,7 +181,7 @@ public abstract class Radio {
     }
 
     /**
-     * 
+     * Se regresan los contactos de prueba
      * @return contactos
      */
     public String[][] getContactos(){
@@ -189,7 +189,7 @@ public abstract class Radio {
     }
 
     /**
-     * 
+     * Se enciende el radio
      * @return mensaje
      */
     public String encender(){
@@ -205,7 +205,7 @@ public abstract class Radio {
     }
 
     /**
-     * 
+     * Se llama a uno de los contactos registrados
      * @param contacto
      * @return mensaje
      */
@@ -224,7 +224,7 @@ public abstract class Radio {
 	}
 
     /**
-     * 
+     * Se termina la llamada si está en curso
      * @return mensaje
      */
 	public String finalizarLlamada(){
