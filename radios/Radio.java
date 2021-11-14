@@ -12,6 +12,7 @@ public abstract class Radio {
     protected boolean noPlaylist = false;
     protected String[][] playllistActual;
     protected String[] canciontActual;
+	protected int indexCancion = 0;
 
 
    abstract String pantalla();
@@ -76,6 +77,31 @@ public abstract class Radio {
 		   default:
 		   	mensaje = "No se pudo seleccionar la lista de reproduccion deseada";
 	   }
+	   return mensaje;
+   }
+   public String cambiarCancion(int direccion){
+	   switch (direccion) {
+		   case 1:  // Adelante
+			   if (indexCancion >= (playllistActual.length-1) ) {
+				   canciontActual = playllistActual[0];
+			   }else{
+				   indexCancion++;
+				   canciontActual = playllistActual[indexCancion];
+			   }
+			   break;
+			case 2:  // Atrás
+			   if (indexCancion <= 1 ) {
+				   canciontActual = playllistActual[playllistActual.length];
+			   }else{
+				   indexCancion--;
+				   canciontActual = playllistActual[indexCancion];
+			   }
+			   break;
+		   default:
+			   break;
+	   }
+	   String mensaje = "Se está reproduciendo: " + canciontActual[0] + " de " + canciontActual[2] + " (" + canciones[1] + ")";
+
 	   return mensaje;
    }
 
