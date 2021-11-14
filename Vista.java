@@ -242,8 +242,8 @@ public class Vista {
     public int cambioCancion(){
         int opcion;
         mensaje("\n" +"¿Qué desea reproducir?");
-        mensaje("1. siguiente canción");
-        mensaje("2. canción anterior");
+        mensaje("1. Siguiente canción");
+        mensaje("2. Canción anterior");
         mensaje("Seleccion: ");
         try {
             opcion = scan.nextInt();
@@ -324,5 +324,27 @@ public class Vista {
         return location;
     }
 
+    public double elegirEmisora(){
+        double opcion;
+        boolean ingresoCorrecto = false;
+
+        while (ingresoCorrecto != true) {
+            mensaje("Ingrese la emisora que desea escuchar:");
+            try {
+                opcion = scan.nextDouble();
+                if(opcion<87.5 | opcion > 108.0){
+                    throw new InputMismatchException("Ingrese una emisora válida")
+                }
+            
+            } catch (InputMismatchException e) {
+                mensaje("La opción elegida no es valida. Porfavor, ingrese una opción válida");
+                scan = new Scanner(System.in);                            
+            }            
+        }
+
+    
+        scan.nextLine();
+        return opcion;
+    }
 
 }

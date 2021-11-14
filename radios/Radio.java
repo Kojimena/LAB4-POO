@@ -82,6 +82,22 @@ public abstract class Radio {
 
    /**
     * 
+    * @param emisora
+    * @return
+    */
+   public String cargarEmisora(double emisora){
+       String mensaje = "";
+       if(emisora >= 87.5 & emisora <= 108.0){
+           this.emisoraactual = emisora;
+           mensaje = "Se está escuchando la estación: " + emisora;
+       }else{
+           mensaje = "No se pudo cargar la emisora";
+       }
+       return mensaje;
+   }
+
+   /**
+    * 
     * @param index
     * @return mensaje
     */
