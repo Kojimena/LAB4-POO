@@ -1,3 +1,9 @@
+/**
+* @author:  Mark Albrand & Jimena Hernández 
+* @version: 14-Nov-21
+* @file: Radio.java
+* Esta clase es la clase madre de los radios.
+**/
 package radios;
 
 public abstract class Radio {
@@ -17,6 +23,11 @@ public abstract class Radio {
 
    abstract String pantalla();
 
+   /**
+    * 
+    * @param frecuencia
+    * @return
+    */
    public String cambiarAMFM(int frecuencia){
     String mensaje = " ";
     noPlaylist = true;
@@ -35,6 +46,10 @@ public abstract class Radio {
     return mensaje;
    }
 
+   /**
+    * 
+    * @return mensaje
+    */
    public String cambiarEmisora(){
      String mensaje="";
      noPlaylist = true;
@@ -48,6 +63,10 @@ public abstract class Radio {
     return mensaje;
    }
 
+   /**
+    * 
+    * @return mensaje
+    */
    public String guardarEmisora(){
     noPlaylist = true;
     String mensaje="";
@@ -61,6 +80,11 @@ public abstract class Radio {
     return mensaje;
    }
 
+   /**
+    * 
+    * @param index
+    * @return mensaje
+    */
    public String seleccionarListaReproduccion(int index){
 	   String mensaje = "";
        switch (index) {
@@ -79,6 +103,12 @@ public abstract class Radio {
 	   }
 	   return mensaje;
    }
+
+   /**
+    * 
+    * @param direccion
+    * @return mensaje
+    */
    public String cambiarCancion(int direccion){
 	   switch (direccion) {
 		   case 1:  // Adelante
@@ -105,6 +135,10 @@ public abstract class Radio {
 	   return mensaje;
    }
 
+   /**
+    * 
+    * @return mensaje
+    */
    public String escucharCancion(){
 	   String mensaje ="";
 	   if(playllistActual != null){
@@ -116,15 +150,27 @@ public abstract class Radio {
 		return mensaje;
 	}
 
+    /**
+     * 
+     * @return mensaje
+     */
     public String conectarTelefono(){
         String mensaje ="Se ha conectado el teléfono correctamente";
         return mensaje;
     }
 
+    /**
+     * 
+     * @return contactos
+     */
     public String[][] getContactos(){
         return contactos;
     }
 
+    /**
+     * 
+     * @return mensaje
+     */
     public String encender(){
         String mensaje ="";
         if (encendido == false){
@@ -137,6 +183,11 @@ public abstract class Radio {
         return mensaje;
     }
 
+    /**
+     * 
+     * @param contacto
+     * @return mensaje
+     */
 	public String llamar(int contacto){
 		String mensaje = "";
 
@@ -151,6 +202,10 @@ public abstract class Radio {
 		return mensaje;
 	}
 
+    /**
+     * 
+     * @return mensaje
+     */
 	public String finalizarLlamada(){
 		String mensaje = "";
 		if (enLlamada) {
@@ -160,7 +215,7 @@ public abstract class Radio {
 			mensaje = "No hay llamadas activas por ahora";
 		}
 		return mensaje;
-	}
+    }
 
 
 }
