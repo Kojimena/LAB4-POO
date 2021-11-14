@@ -227,6 +227,31 @@ public class Vista {
     * @return La opción elegida por el usuario
     * @throws InputMismatchException
     */
+    public int cambioCancion(){
+        int opcion;
+        mensaje("\n" +"¿Qué desea reproducir");
+        mensaje("1. siguiente canción");
+        mensaje("2. canción anterior");
+        mensaje("Seleccion: ");
+        try {
+            opcion = scan.nextInt();
+        
+        } catch (InputMismatchException e) {
+            mensaje("La opción elegida no es valida. Porfavor, ingrese una opción válida");
+            scan = new Scanner(System.in);
+            opcion = scan.nextInt();
+        
+        }
+    
+    scan.nextLine();
+    return opcion;
+    }
+
+    /**
+    * Despliega el menú de opciones para el usuario. Luego, recibe la opción elegida por el usuario y la devuelve.
+    * @return La opción elegida por el usuario
+    * @throws InputMismatchException
+    */
     public int LLamarContacto(){
         int opcion;
         mensaje("\n" +"¿A quién desea llamar ");
