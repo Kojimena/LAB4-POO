@@ -191,7 +191,6 @@ public class Controlador {
 
                         case 14:
                         if (radioactualS.getEncendido()) {
-                            vista.separador();
                             vista.mensaje(radioactualS.toString());
                             vista.separador();
                         }else{
@@ -379,7 +378,6 @@ public class Controlador {
 
                         case 14:
                         if (radioactualA.getEncendido()) {
-                            vista.separador();
                             vista.mensaje(radioactualA.toString());
                             vista.separador();
                         }else{
@@ -569,7 +567,7 @@ public class Controlador {
 
                         case 14:
                         if (radioactualC.getEncendido()) {
-                            vista.separador();
+                            
                             vista.mensaje(radioactualC.toString());
                             vista.separador();
                         }else{
