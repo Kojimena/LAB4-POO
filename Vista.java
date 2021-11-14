@@ -21,6 +21,14 @@ public class Vista {
         System.out.println(mensaje);
     }
 
+    public void mensaje(String[][] mensaje){
+        for (int i = 0; i < mensaje.length; i++) {
+            String[] contacto = mensaje[i];
+            String mensajeContacto = "Nombre: " + contacto[0] + " Numero: " + contacto[1];
+            mensaje(mensajeContacto);
+        }
+    }
+
     /**
     * Despliega el menú de opciones para el usuario. Luego, recibe la opción elegida por el usuario y la devuelve.
     * @return La opción elegida por el usuario
