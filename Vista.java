@@ -175,6 +175,33 @@ public class Vista {
     * @return La opción elegida por el usuario
     * @throws InputMismatchException
     */
+    public int tipoFrecuencia(){
+        int opcion;
+        mensaje("\n" +"¿Qué tipo de frecuencia desea");
+        mensaje("1. FM");
+        mensaje("2. AM");
+        mensaje("Seleccion: ");
+        try {
+            opcion = scan.nextInt();
+        
+        } catch (InputMismatchException e) {
+            mensaje("La opción elegida no es valida. Porfavor, ingrese una opción válida");
+            scan = new Scanner(System.in);
+            opcion = scan.nextInt();
+        
+        }
+    
+    scan.nextLine();
+    return opcion;
+    }
+
+
+
+    /**
+    * Despliega el menú de opciones para el usuario. Luego, recibe la opción elegida por el usuario y la devuelve.
+    * @return La opción elegida por el usuario
+    * @throws InputMismatchException
+    */
     public int listadeReproduccion(){
         int opcion;
         mensaje("\n" +"¿Qué tipo de playlist desea");
