@@ -205,8 +205,8 @@ public class Vista {
     public int listadeReproduccion(){
         int opcion;
         mensaje("\n" +"¿Qué tipo de playlist desea");
-        mensaje("1. Top 5 Guatemala");
-        mensaje("2. Lofi-Chill");
+        mensaje("1. Lofi-Chill");
+        mensaje("2. Top 5 Guatemala");
         mensaje("Seleccion: ");
         try {
             opcion = scan.nextInt();
