@@ -149,7 +149,7 @@ public class Vista {
             mensaje("9. Mostrar Contactos");
             mensaje("10. LLamar a contacto");
             mensaje("11. Finalizar llamada ");
-            mensaje("12. Lllamar a último contacto");
+            mensaje("12. Llamar a último contacto");
             mensaje("\n MODO PRODUCTIVIDAD ");
             mensaje("13. Ver tarjetas presentación");
             mensaje("14. Salir");
