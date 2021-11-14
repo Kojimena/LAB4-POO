@@ -214,7 +214,7 @@ public class Vista {
         int opcion = 0;
         boolean ingresoCorrecto= false;
 
-        while (ingresoCorrecto != false) {
+        while (ingresoCorrecto !=true) {
             mensaje("\n" +"¿Qué tipo de frecuencia desea");
             mensaje("1. FM");
             mensaje("2. AM");

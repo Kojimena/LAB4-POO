@@ -254,5 +254,8 @@ public abstract class Radio {
         return mensaje;
     }
 
+    public boolean getEncendido(){
+        return encendido;
+    }
 
 }

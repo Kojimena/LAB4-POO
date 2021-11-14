@@ -24,64 +24,115 @@ public class Controlador {
                         break;
 
                         case 1://cambiar AM A FM
-                        int tipofrecuenciaS= vista.tipoFrecuencia();
-                        vista.mensaje(radioactualS.cambiarAMFM(tipofrecuenciaS));
-
+                        if (radioactualS.getEncendido()) {
+                            int tipofrecuenciaS= vista.tipoFrecuencia();
+                            vista.mensaje(radioactualS.cambiarAMFM(tipofrecuenciaS));                            
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 2:// Cambiar emisoras
-                        vista.mensaje(radioactualS.cambiarEmisora());
+                        if (radioactualS.getEncendido()) {
+                            vista.mensaje(radioactualS.cambiarEmisora());                            
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break; 
 
                         case 3://Guardar emisora
-                        vista.mensaje(radioactualS.guardarEmisora());
+                        if (radioactualS.getEncendido()) {
+                            vista.mensaje(radioactualS.guardarEmisora());                            
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 4:// Cargar emisora
-                        double nuevaEmisoraS = vista.elegirEmisora();
-                        vista.mensaje(radioactualS.cargarEmisora(nuevaEmisoraS));
+                        if (radioactualS.getEncendido()) {
+                            double nuevaEmisoraS = vista.elegirEmisora();
+                            vista.mensaje(radioactualS.cargarEmisora(nuevaEmisoraS));                            
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 5://Seleccionar lista de reproducción
-                        int tiposeleccionS= vista.listadeReproduccion();
-                        vista.mensaje(radioactualS.seleccionarListaReproduccion(tiposeleccionS));
+                        if (radioactualS.getEncendido()) {
+                            int tiposeleccionS= vista.listadeReproduccion();
+                            vista.mensaje(radioactualS.seleccionarListaReproduccion(tiposeleccionS));                            
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 6: //cambiar canción
-                        int tipodecambioS= vista.cambioCancion();
-                        vista.mensaje(radioactualS.cambiarCancion(tipodecambioS));
+                        if (radioactualS.getEncendido()) {
+                            int tipodecambioS= vista.cambioCancion();
+                            vista.mensaje(radioactualS.cambiarCancion(tipodecambioS));                            
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 7: //escuchar canción
-                        vista.mensaje(radioactualS.escucharCancion());
+                        if (radioactualS.getEncendido()) {                            
+                            vista.mensaje(radioactualS.escucharCancion());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 8: //Conectar/desconectar teléfono
-                        vista.mensaje(radioactualS.conectarTelefono());
+                        if (radioactualS.getEncendido()) {                            
+                            vista.mensaje(radioactualS.conectarTelefono());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break; 
 
                         case 9:// Mostrar contactos
-                        vista.mensaje(radioactualS.getContactos());
+                        if (radioactualS.getEncendido()) {                            
+                            vista.mensaje(radioactualS.getContactos());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 10://llamar a contacto
-                        int llamarS= vista.LLamarContacto();
-                        vista.mensaje(radioactualS.llamar(llamarS));
+                        if (radioactualS.getEncendido()) {                            
+                            int llamarS= vista.LLamarContacto();
+                            vista.mensaje(radioactualS.llamar(llamarS));
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 11://Finalizar llamada
-                        vista.mensaje(radioactualS.finalizarLlamada());
+                        if (radioactualS.getEncendido()) {                            
+                            vista.mensaje(radioactualS.finalizarLlamada());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
 
                         break;
 
                         case 12: //Cambiar a bocinas o auriculares
-                        int cambioBoaS= vista.Cambiarbocinasaudifonos();
-                        vista.mensaje(radioactualS.cambiarBocinasAuriculares(cambioBoaS));
+                        if (radioactualS.getEncendido()) {                            
+                            int cambioBoaS= vista.Cambiarbocinasaudifonos();
+                            vista.mensaje(radioactualS.cambiarBocinasAuriculares(cambioBoaS));
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 13: //planificar viajes
-                        String viajeS= vista.planificarViaje();
-                        vista.mensaje(radioactualS.planificarViaje(viajeS));
+                        if (radioactualS.getEncendido()) {                            
+                            String viajeS= vista.planificarViaje();
+                            vista.mensaje(radioactualS.planificarViaje(viajeS));
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
                         
                     }
@@ -99,62 +150,112 @@ public class Controlador {
                         break;
 
                         case 1://cambiar AM A FM
-                        int tipofrecuenciaA= vista.tipoFrecuencia();
-                        vista.mensaje(radioactualA.cambiarAMFM(tipofrecuenciaA));
-
+                        if (radioactualA.getEncendido()) {                            
+                            int tipofrecuenciaA= vista.tipoFrecuencia();
+                            vista.mensaje(radioactualA.cambiarAMFM(tipofrecuenciaA));
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 2:// Cambiar emisoras
-                        vista.mensaje(radioactualA.cambiarEmisora());
+                        if (radioactualA.getEncendido()) {                            
+                            vista.mensaje(radioactualA.cambiarEmisora());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break; 
 
                         case 3://Guardar emisora
-                        vista.mensaje(radioactualA.guardarEmisora());
+                        if (radioactualA.getEncendido()) {                            
+                            vista.mensaje(radioactualA.guardarEmisora());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 4:// Cargar emisora
-                        double nuevaEmisoraA = vista.elegirEmisora();
-                        vista.mensaje(radioactualA.cargarEmisora(nuevaEmisoraA));
+                        if (radioactualA.getEncendido()) {                            
+                            double nuevaEmisoraA = vista.elegirEmisora();
+                            vista.mensaje(radioactualA.cargarEmisora(nuevaEmisoraA));
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 5://Seleccionar lista de reproducción
-                        int tiposeleccionA= vista.listadeReproduccion();
-                        vista.mensaje(radioactualA.seleccionarListaReproduccion(tiposeleccionA));
+                        if (radioactualA.getEncendido()) {                            
+                            int tiposeleccionA= vista.listadeReproduccion();
+                            vista.mensaje(radioactualA.seleccionarListaReproduccion(tiposeleccionA));
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 6: //cambiar canción
-                        int tipodecambioA= vista.cambioCancion();
-                        vista.mensaje(radioactualA.cambiarCancion(tipodecambioA));
+                        if (radioactualA.getEncendido()) {                            
+                            int tipodecambioA= vista.cambioCancion();
+                            vista.mensaje(radioactualA.cambiarCancion(tipodecambioA));
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 7: //escuchar canción
-                        vista.mensaje(radioactualA.escucharCancion());
+                        if (radioactualA.getEncendido()) {                            
+                            vista.mensaje(radioactualA.escucharCancion());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 8: //Conectar/desconectar teléfono
-                        vista.mensaje(radioactualA.conectarTelefono());
+                        if (radioactualA.getEncendido()) {                            
+                            vista.mensaje(radioactualA.conectarTelefono());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break; 
 
                         case 9:// Mostrar contactos
-                        vista.mensaje(radioactualA.getContactos());
+                        if (radioactualA.getEncendido()) {                            
+                            vista.mensaje(radioactualA.getContactos());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 10://llamar a contacto
-                        int llamarA= vista.LLamarContacto();
-                        vista.mensaje(radioactualA.llamar(llamarA));
+                        if (radioactualA.getEncendido()) {                            
+                            int llamarA= vista.LLamarContacto();
+                            vista.mensaje(radioactualA.llamar(llamarA));
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 11://Finalizar llamada
-                        vista.mensaje(radioactualA.finalizarLlamada());
-
+                        if (radioactualA.getEncendido()) {                            
+                            vista.mensaje(radioactualA.finalizarLlamada());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 12: //Llamar a último contacto
-                        vista.mensaje(radioactualA.llamarUltimoContacto());
+                        if (radioactualA.getEncendido()) {                            
+                            vista.mensaje(radioactualA.llamarUltimoContacto());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 13: //Ver tarjetas presentación
-                        vista.mensaje(radioactualA.verTarjetasPresentacion());
+                        if (radioactualA.getEncendido()) {                            
+                            vista.mensaje(radioactualA.verTarjetasPresentacion());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
                         
                     }
@@ -173,62 +274,113 @@ public class Controlador {
                         break;
 
                         case 1://cambiar AM A FM
-                        int tipofrecuenciaC= vista.tipoFrecuencia();
-                        vista.mensaje(radioactualC.cambiarAMFM(tipofrecuenciaC));
+                        if (radioactualC.getEncendido()) {                            
+                            int tipofrecuenciaC= vista.tipoFrecuencia();
+                            vista.mensaje(radioactualC.cambiarAMFM(tipofrecuenciaC));
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
 
                         break;
 
                         case 2:// Cambiar emisoras
-                        vista.mensaje(radioactualC.cambiarEmisora());
+                        if (radioactualC.getEncendido()) {                            
+                            vista.mensaje(radioactualC.cambiarEmisora());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break; 
 
                         case 3://Guardar emisora
-                        vista.mensaje(radioactualC.guardarEmisora());
+                        if (radioactualC.getEncendido()) {                            
+                            vista.mensaje(radioactualC.guardarEmisora());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 4:// Cargar emisora
-                        double nuevaEmisoraC = vista.elegirEmisora();
-                        vista.mensaje(radioactualC.cargarEmisora(nuevaEmisoraC));
+                        if (radioactualC.getEncendido()) {                            
+                            double nuevaEmisoraC = vista.elegirEmisora();
+                            vista.mensaje(radioactualC.cargarEmisora(nuevaEmisoraC));
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 5://Seleccionar lista de reproducción
-                        int tiposeleccionC= vista.listadeReproduccion();
-                        vista.mensaje(radioactualC.seleccionarListaReproduccion(tiposeleccionC));
+                        if (radioactualC.getEncendido()) {                            
+                            int tiposeleccionC= vista.listadeReproduccion();
+                            vista.mensaje(radioactualC.seleccionarListaReproduccion(tiposeleccionC));
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 6: //cambiar canción
-                        int tipodecambioC= vista.cambioCancion();
-                        vista.mensaje(radioactualC.cambiarCancion(tipodecambioC));
+                        if (radioactualC.getEncendido()) {                            
+                            int tipodecambioC= vista.cambioCancion();
+                            vista.mensaje(radioactualC.cambiarCancion(tipodecambioC));
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 7: //escuchar canción
-                        vista.mensaje(radioactualC.escucharCancion());
+                        if (radioactualC.getEncendido()) {                            
+                            vista.mensaje(radioactualC.escucharCancion());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 8: //Conectar/desconectar teléfono
-                        vista.mensaje(radioactualC.conectarTelefono());
+                        if (radioactualC.getEncendido()) {                            
+                            vista.mensaje(radioactualC.conectarTelefono());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break; 
 
                         case 9:// Mostrar contactos
-                        vista.mensaje(radioactualC.getContactos());
+                        if (radioactualC.getEncendido()) {                            
+                            vista.mensaje(radioactualC.getContactos());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 10://llamar a contacto
-                        int llamarC= vista.LLamarContacto();
-                        vista.mensaje(radioactualC.llamar(llamarC));
+                        if (radioactualC.getEncendido()) {                            
+                            int llamarC= vista.LLamarContacto();
+                            vista.mensaje(radioactualC.llamar(llamarC));
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 11://Finalizar llamada
-                        vista.mensaje(radioactualC.finalizarLlamada());
-
+                        if (radioactualC.getEncendido()) {                            
+                            vista.mensaje(radioactualC.finalizarLlamada());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 12: //Cambiar a llamada en espera
-                        vista.mensaje(radioactualC.llamadaEnEspera());
+                        if (radioactualC.getEncendido()) {                            
+                            vista.mensaje(radioactualC.llamadaEnEspera());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
 
                         case 13: //Pronostico del tiempo
-                        vista.mensaje(radioactualC.pronosticoTiempo());
+                        if (radioactualC.getEncendido()) {                            
+                            vista.mensaje(radioactualC.pronosticoTiempo());
+                        }else{
+                            vista.mensaje("El radio no se encuentra encendido");
+                        }
                         break;
                         
                     }
