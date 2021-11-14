@@ -325,7 +325,7 @@ public class Vista {
     }
 
     public double elegirEmisora(){
-        double opcion;
+        double opcion = 0.0;
         boolean ingresoCorrecto = false;
 
         while (ingresoCorrecto != true) {
@@ -333,7 +333,7 @@ public class Vista {
             try {
                 opcion = scan.nextDouble();
                 if(opcion<87.5 | opcion > 108.0){
-                    throw new InputMismatchException("Ingrese una emisora válida")
+                    throw new InputMismatchException("Ingrese una emisora válida");
                 }
             
             } catch (InputMismatchException e) {
