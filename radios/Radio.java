@@ -9,12 +9,16 @@ public abstract class Radio {
     protected Boolean encendido = false;
     protected Boolean enLlamada = false;
     protected String tipoFrecuencia = "FM";
+    protected boolean noPlaylist = false;
+    protected String[][] playllistActual;
+    protected String[] canciontActual;
 
 
    abstract String pantalla();
 
    public String cambiarAMFM(int frecuencia){
     String mensaje = " ";
+    noPlaylist = true;
     switch(frecuencia){
         case 1:
         mensaje= " Se ha cambiado a la frecuencia FM";
@@ -32,6 +36,7 @@ public abstract class Radio {
 
    public String cambiarEmisora(){
      String mensaje="";
+     noPlaylist = true;
     if(emisoraactual!= 108.0){
         emisoraactual += 0.5;
         mensaje = "Se ha cambiado a la emisora: "+ emisoraactual;
@@ -43,17 +48,35 @@ public abstract class Radio {
    }
 
    public String guardarEmisora(){
+    noPlaylist = true;
     String mensaje="";
-       for (int i = 0; i < emisorasGuardadas.length; i++) {
-           if (emisorasGuardadas[i] == 0.0){
-               emisorasGuardadas[i] = emisoraactual;
-               mensaje= " Se ha guardado la emisora correctamente. ";
-               break;
-           }
-       }
-       return mensaje;
+    for (int i = 0; i < emisorasGuardadas.length; i++) {
+        if (emisorasGuardadas[i] == 0.0){
+            emisorasGuardadas[i] = emisoraactual;
+            mensaje= " Se ha guardado la emisora correctamente. ";
+            break;
+        }
+    }
+    return mensaje;
    }
 
-
+   public String seleccionarListaReproduccion(int index){
+	   String mensaje = "";
+       switch (index) {
+		   case 1:
+			   playllistActual = canciones[0];
+			   canciontActual = playllistActual[0];
+			   mensaje = "Se está reproduciendo: " + canciontActual[0] + " de " + canciontActual[2] + " (" + canciones[1] + ")";
+			   break;
+	   
+			case 2:
+			   playllistActual = canciones[1];
+			   canciontActual = playllistActual[0];
+			   mensaje = "Se está reproduciendo: " + canciontActual[0] + " de " + canciontActual[2] + " (" + canciones[1] + ")";
+		   default:
+		   	mensaje = "No se pudo seleccionar la lista de reproduccion deseada";
+	   }
+	   return mensaje;
+   }
 
 }
