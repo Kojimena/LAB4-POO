@@ -130,27 +130,35 @@ public abstract class Radio {
     */
    public String cambiarCancion(int direccion){
        noPlaylist = false;
-	   switch (direccion) {
-		   case 1:  // Adelante
-			   if (indexCancion >= (playllistActual.length-1) ) {
-				   canciontActual = playllistActual[0];
-			   }else{
-				   indexCancion++;
-				   canciontActual = playllistActual[indexCancion];
-			   }
-			   break;
-			case 2:  // Atrás
-			   if (indexCancion <= 1 ) {
-				   canciontActual = playllistActual[playllistActual.length-1];
-			   }else{
-				   indexCancion--;
-				   canciontActual = playllistActual[indexCancion];
-			   }
-			   break;
-		   default:
-			   break;
-	   }
-	   String mensaje = "Se está reproduciendo: " + canciontActual[0] + " de " + canciontActual[2] + " (" + canciontActual[1] + ")";
+       String mensaje = "";
+
+       if(playllistActual != null){
+           switch (direccion) {
+               case 1:  // Adelante
+                   if (indexCancion >= (playllistActual.length-1) ) {
+                       canciontActual = playllistActual[0];
+                   }else{
+                       indexCancion++;
+                       canciontActual = playllistActual[indexCancion];
+                   }
+                   break;
+                case 2:  // Atrás
+                   if (indexCancion <= 1 ) {
+                       canciontActual = playllistActual[playllistActual.length-1];
+                   }else{
+                       indexCancion--;
+                       canciontActual = playllistActual[indexCancion];
+                   }
+                   break;
+               default:
+                   break;
+           }
+           mensaje = "Se está reproduciendo: " + canciontActual[0] + " de " + canciontActual[2] + " (" + canciontActual[1] + ")";
+
+       }else{
+           mensaje = "No tiene una playlist activa.\n";
+       }
+	    
 
 	   return mensaje;
    }
@@ -215,6 +223,7 @@ public abstract class Radio {
 		try {
 			String[] contactoElegido = contactos[contacto];
 			enLlamada = true;
+            contactoactual = contacto;
 			mensaje = "Llamando a: " + contactoElegido[0];
 		} catch (Exception e) {
 			mensaje = "No se ha encontrado el contacto.";
@@ -232,6 +241,7 @@ public abstract class Radio {
 		if (enLlamada) {
 			enLlamada = false;
 			mensaje = "Se ha finalizado la llamada";
+            contactoactual = -1;
 		}else{
 			mensaje = "No hay llamadas activas por ahora";
 		}
