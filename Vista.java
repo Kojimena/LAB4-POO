@@ -20,6 +20,10 @@ public class Vista {
         System.out.println(mensaje);
     }
 
+    /**
+     * Imprime una serie de contactos en pantalla
+     * @param mensaje
+     */
     public void mensaje(String[][] mensaje){
         for (int i = 0; i < mensaje.length; i++) {
             String[] contacto = mensaje[i];
@@ -381,6 +385,10 @@ public class Vista {
         return location;
     }
 
+    /**
+     * Pide la emisora que el usuario desea escuchar
+     * @return Emisora elegida
+     */
     public double elegirEmisora(){
         double opcion = 0.0;
         boolean ingresoCorrecto = false;
@@ -406,6 +414,9 @@ public class Vista {
         return opcion;
     }
 
+    /**
+     * Un separador simple para ubicar de maejor manera 
+     */
     public void separador(){
         mensaje("############################################################\n");
     }
