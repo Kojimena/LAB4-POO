@@ -20,6 +20,10 @@ public class Vista {
         System.out.println(mensaje);
     }
 
+    /**
+     * Imprime una serie de contactos en pantalla
+     * @param mensaje
+     */
     public void mensaje(String[][] mensaje){
         for (int i = 0; i < mensaje.length; i++) {
             String[] contacto = mensaje[i];
@@ -48,7 +52,7 @@ public class Vista {
             mensaje("\n MODO REPRODUCCIÓN ");
             mensaje("5. Seleccionar lista de reproducción ");
             mensaje("6. Cambiar canción");
-            mensaje("7. Escuchar una canción");
+            mensaje("7. Escuchar una canción/reanudar playlist");
             mensaje("\n MODO TELEFONO ");
             mensaje("8. Conectar/desconectar teléfono");
             mensaje("9. Mostrar Contactos");
@@ -58,7 +62,7 @@ public class Vista {
             mensaje("\n MODO PRODUCTIVIDAD ");
             mensaje("13. Planificar Viajes");
             mensaje("14. Ver pantalla");
-            mensaje("15. Salir");
+            mensaje("15. Salir al menú de Radios");
             mensaje("Seleccion: ");
             try {
                 opcion = scan.nextInt();
@@ -96,7 +100,7 @@ public class Vista {
             mensaje("\n MODO REPRODUCCIÓN ");
             mensaje("5. Seleccionar lista de reproducción ");
             mensaje("6. Cambiar canción");
-            mensaje("7. Escuchar una canción");
+            mensaje("7. Escuchar una canción/reanudar playlist");
             mensaje("\n MODO TELEFONO ");
             mensaje("8. Conectar/desconectar teléfono");
             mensaje("9. Mostrar Contactos");
@@ -106,7 +110,7 @@ public class Vista {
             mensaje("\n MODO PRODUCTIVIDAD ");
             mensaje("13. Ver pronostico del tiempo");
             mensaje("14. Ver pantalla");
-            mensaje("15. Salir");
+            mensaje("15. Salir al menú de radios");
             mensaje("Seleccion: ");
             try {
                 opcion = scan.nextInt();
@@ -145,7 +149,7 @@ public class Vista {
             mensaje("\n MODO REPRODUCCIÓN ");
             mensaje("5. Seleccionar lista de reproducción ");
             mensaje("6. Cambiar canción");
-            mensaje("7. Escuchar una canción");
+            mensaje("7. Escuchar una canción/reanudar playlist");
             mensaje("\n MODO TELEFONO ");
             mensaje("8. Conectar/desconectar teléfono");
             mensaje("9. Mostrar Contactos");
@@ -155,7 +159,7 @@ public class Vista {
             mensaje("\n MODO PRODUCTIVIDAD ");
             mensaje("13. Ver tarjetas presentación");
             mensaje("14. Ver pantalla");
-            mensaje("15. Salir");
+            mensaje("15. Salir al menú de radios");
             mensaje("Seleccion: ");
             try {
                 opcion = scan.nextInt();
@@ -381,6 +385,10 @@ public class Vista {
         return location;
     }
 
+    /**
+     * Pide la emisora que el usuario desea escuchar
+     * @return Emisora elegida
+     */
     public double elegirEmisora(){
         double opcion = 0.0;
         boolean ingresoCorrecto = false;
@@ -406,6 +414,9 @@ public class Vista {
         return opcion;
     }
 
+    /**
+     * Un separador simple para ubicar de maejor manera 
+     */
     public void separador(){
         mensaje("############################################################\n");
     }
